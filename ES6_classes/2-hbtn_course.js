@@ -4,8 +4,7 @@ constructor(name, length, students) {
     this.length = length;
     this.students = students;
 }
-  
-    // Getter and setter for name
+
 get name() {
     return this._name;
 }
@@ -17,7 +16,7 @@ set name(value) {
     this._name = value;
 }
   
-    // Getter and setter for length
+
 get length() {
     return this._length;
 }
@@ -29,7 +28,7 @@ set length(value) {
     this._length = value;
 }
   
-    // Getter and setter for students
+
 get students() {
     return this._students;
 }
