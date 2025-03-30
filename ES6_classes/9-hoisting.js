@@ -1,36 +1,36 @@
 export class HolbertonClass {
-constructor(year, location) {
+  constructor(year, location) {
     this._year = year;
     this._location = location;
-}
+  }
 
-get year() {
+  get year() {
     return this._year;
-}
-  
-get location() {
+  }
+
+  get location() {
     return this._location;
-}
+  }
 }
 
 export class StudentHolberton {
-constructor(firstName, lastName, holbertonClass) {
+  constructor(firstName, lastName, holbertonClass) {
     this._firstName = firstName;
     this._lastName = lastName;
     this._holbertonClass = holbertonClass;
-}
-  
-get fullName() {
+  }
+
+  get fullName() {
     return `${this._firstName} ${this._lastName}`;
-}
-  
-get holbertonClass() {
+  }
+
+  get holbertonClass() {
     return this._holbertonClass;
-}
-  
-get fullStudentDescription() {
+  }
+
+  get fullStudentDescription() {
     return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
-}
+  }
 }
 
 const class2019 = new HolbertonClass(2019, 'San Francisco');
@@ -42,6 +42,6 @@ const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
 const student4 = new StudentHolberton('Donald', 'Bush', class2019);
 const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
 
-export const listOfStudents = [student1, student2, student3, student4, student5];
+const listOfStudents = [student1, student2, student3, student4, student5];
 
 export default listOfStudents;
