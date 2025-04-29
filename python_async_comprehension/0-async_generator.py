@@ -5,6 +5,7 @@ return a random number
 import asyncio
 import random
 
+
 async def async_generator():
     """return a random number"""
     for _ in range(10):
