@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+"""
+return a list
+"""
 import csv
-import math
 from typing import List, Tuple
 
 
@@ -16,6 +18,7 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """init a dataset"""
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -24,7 +27,7 @@ class Server:
             with open(self.DATA_FILE) as f:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
-            self.__dataset = dataset[1:]  # Skip header
+            self.__dataset = dataset[1:]
 
         return self.__dataset
 
