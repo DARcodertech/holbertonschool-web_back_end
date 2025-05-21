@@ -10,7 +10,7 @@ function countStudents(path) {
       return;
     }
 
-    const students = lines.slice(1); // enlevant l'en-tête
+    const students = lines.slice(1);
     const fields = {};
 
     for (const line of students) {
