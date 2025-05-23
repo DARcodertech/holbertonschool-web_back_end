@@ -10,7 +10,7 @@ function countStudents(path) {
       }
 
       const lines = data.trim().split('\n');
-      const students = lines.slice(1).filter(line => line.trim() !== '');
+      const students = lines.slice(1).filter((line) => line.trim() !== '');
 
       const fields = {};
 
@@ -46,8 +46,8 @@ const app = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.write('This is the list of our students\n');
     countStudents(process.argv[2])
-      .then(data => res.end(data))
-      .catch(err => res.end(err.message));
+      .then((data) => res.end(data))
+      .catch((err) => res.end(err.message));
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Not Found');
