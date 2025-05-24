@@ -19,14 +19,15 @@ function countStudents(path) {
 
       for (const line of students) {
         const parts = line.split(',');
-        if (parts.length < 4) continue;
-        const firstName = parts[0].trim();
-        const field = parts[3].trim();
+        if (parts.length >= 4) {
+          const firstName = parts[0].trim();
+          const field = parts[3].trim();
 
-        if (!fields[field]) {
-          fields[field] = [];
+          if (!fields[field]) {
+            fields[field] = [];
+          }
+          fields[field].push(firstName);
         }
-        fields[field].push(firstName);
       }
 
       let output = `Number of students: ${students.length}`;
